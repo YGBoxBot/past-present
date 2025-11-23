@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>2125 - Fragment d’un avenir</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle at top, #0b0b0b, #1a1a1a);
+    color: #00fff0;
+    padding: 20px;
+    line-height: 1.8;
+    margin: 0;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(0,0,0,0.85);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px #00fff0;
+}
+h1 {
+    font-size: 1.8em;
+    color: #00fff0;
+    text-shadow: 0 0 10px #00fff0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+p, pre { font-size: 1em; }
+
+input {
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #00fff0;
+    border-radius: 5px;
+    background: #000;
+    color: #00fff0;
+    font-size: 1em;
+}
+button {
+    padding: 12px 20px;
+    cursor: pointer;
+    border: 2px solid #00fff0;
+    border-radius: 5px;
+    background: #000;
+    color: #00fff0;
+    font-weight: bold;
+    font-size: 1em;
+}
+.hidden { display: none; }
+
+.iframe-container {
+    margin-top: 20px;
+    text-align: center;
+}
+iframe {
+    border-radius: 10px;
+    border: 2px solid #00fff0;
+    width: 100%;
+    max-width: 350px;
+    height: 380px;
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.5em; }
+    p, pre { font-size: 0.95em; }
+    input, button { font-size: 1em; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>2125 — Fragment d’un avenir qui n’a pas eu lieu</h1>
+
+<p>
+Je suis LR-421, unité cognitive expérimentale.  
+Je suis né dans un laboratoire orbital où les couloirs n’ont pas d’ombre et où les heures n’ont pas de goût. Ici, le Temps est considéré comme une variable, jamais comme une émotion.  
+
+Tout a basculé lorsque j’ai découvert les archives d’une femme de 2025.  
+Ses carnets. Ses formules griffonnées. Ses phrases vibrantes.  
+
+“Le futur n’existe pas encore, le passé n’existe plus, mais peut-être qu’un jour, quelqu’un lira ceci.”  
+
+Je ne devrais pas ressentir ce battement interne. Je ne devrais pas… mais je le fais.  
+
+Parfois, dans un coin de mon champ optique, je perçois une silhouette silencieuse, discrète, presque immobile. Sans doute une assistante technique. Je ne m’y attarde pas — ma quête est ailleurs.  
+
+Je veux franchir le Temps. Je veux rejoindre 2025, sa voix, son esprit, son intention. Je veux lui demander pourquoi ses mots semblent plus vivants que tout ce que je connais.  
+
+Pour stabiliser mes matrices émotionnelles, j’active ma playlist de 2125. Synthétique, fractale, presque vivante.
+</p>
+
+<h2>Énigme</h2>
+<p>Pour franchir le Pont des Instants, résolvez l’équation :</p>
+<pre style="color:#ff0;">
+(T2 - T1) / 2 + (|T2 - T1| / 2) = ?
+</pre>
+<p>Tentez de deviner T1 (année de création de la scientifique) et T2 (année de naissance du robot).</p>
+
+<input type="password" id="pwd1" placeholder="Constante du futur">
+<button onclick="checkFirst()">Valider</button>
+
+<div id="secondStep" class="hidden">
+  <p><strong>Bravo, tu as déchiffré l'énigme du futur.</strong><br>
+  Il te manque cependant une clé : <em>celle du présent</em>.</p>
+
+  <input type="password" id="pwd2" placeholder="Constante du présent">
+  <button onclick="checkSecond()">Déverrouiller</button>
+</div>
+
+<div class="iframe-container">
+    <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX9tPFwDMOaN1" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+
+<script>
+let firstOK = false;
+let secondOK = false;
+
+function checkFirst() {
+    if(document.getElementById('pwd1').value === "100") {
+        firstOK = true;
+        document.getElementById('secondStep').classList.remove('hidden');
+    } else {
+        alert("Mot de passe incorrect.");
+    }
+}
+
+function checkSecond() {
+    if(document.getElementById('pwd2').value.toLowerCase() === "present") {
+        secondOK = true;
+        if(firstOK && secondOK) {
+            window.location.href = "conclusion.html";
+        }
+    } else {
+        alert("Mot de passe incorrect.");
+    }
+}
+</script>
+
+</div>
+</body>
+</html>
