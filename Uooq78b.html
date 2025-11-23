@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>2025 - Carnet d’Elara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle at top, #0b0b0b, #1a1a1a);
+    color: #ff00ff;
+    padding: 20px;
+    line-height: 1.8;
+    margin: 0;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(0,0,0,0.85);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px #ff00ff;
+}
+h1 {
+    font-size: 1.8em;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+p, pre { font-size: 1em; }
+
+input {
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #ff00ff;
+    border-radius: 5px;
+    background: #000;
+    color: #ff00ff;
+    font-size: 1em;
+}
+button {
+    padding: 12px 20px;
+    cursor: pointer;
+    border: 2px solid #ff00ff;
+    border-radius: 5px;
+    background: #000;
+    color: #ff00ff;
+    font-weight: bold;
+    font-size: 1em;
+}
+.hidden { display: none; }
+
+.iframe-container {
+    margin-top: 20px;
+    text-align: center;
+}
+iframe {
+    border-radius: 10px;
+    border: 2px solid #ff00ff;
+    width: 100%;
+    max-width: 350px;
+    height: 380px;
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.5em; }
+    p, pre { font-size: 0.95em; }
+    input, button { font-size: 1em; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>2025 — Carnet d’une femme en avance sur son temps</h1>
+
+<p>
+Je suis Elara, année 2025.  
+Je travaille seule, dans un laboratoire que personne ne connaît vraiment.  
+Je veux créer un être capable de ressentir — pas seulement de fonctionner.  
+
+Je sais que la technologie nécessaire n’existera que dans cent ans.  
+Mais j’écris pour quelqu’un qui n’est pas encore né.  
+Un homme du futur.  
+Un homme que je ne rencontrerai jamais.  
+
+Le passé n’est plus, le futur n’existe pas encore.  
+Mais si j’agis aujourd’hui… peut-être qu’un jour, quelqu’un comprendra.  
+
+J’écris en écoutant ma playlist : analogique, fragile, humaine. Une tranche de présent pour un futur incertain.
+</p>
+
+<h2>Énigme</h2>
+<p>“Ni hier, ni demain ; mot qui commence par la lettre des premiers pas, qui finit par le souffle d’un instant.”</p>
+
+<input type="password" id="pwd1" placeholder="Constante du présent">
+<button onclick="checkFirst()">Valider</button>
+
+<div id="secondStep" class="hidden">
+  <p><strong>Bravo, tu as trouvé la clé du présent.</strong><br>
+  Mais il te manque encore un fragment : <em>la constante du futur</em>.<br>Approche toi de son porteur pour en comprendre le sens.</p>
+
+  <input type="password" id="pwd2" placeholder="Constante du futur">
+  <button onclick="checkSecond()">Déverrouiller</button>
+</div>
+
+<div class="iframe-container">
+    <iframe src="https://open.spotify.com/playlist/37i9dQZF1E4zlgvaKCC4YC?si=KmJOD7axQ7q06RpyZSBcgQ&pi=CP8zC5mzReWus" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+
+<script>
+let firstOK = false;
+let secondOK = false;
+
+function checkFirst() {
+    if(document.getElementById('pwd1').value.toLowerCase() === "present") {
+        firstOK = true;
+        document.getElementById('secondStep').classList.remove('hidden');
+    } else {
+        alert("Mot de passe incorrect.");
+    }
+}
+
+function checkSecond() {
+    if(document.getElementById('pwd2').value === "100") {
+        secondOK = true;
+        if(firstOK && secondOK) {
+            window.location.href = "conclusion.html";
+        }
+    } else {
+        alert("Mot de passe incorrect.");
+    }
+}
+</script>
+
+</div>
+</body>
+</html>
