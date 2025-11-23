@@ -118,7 +118,8 @@ let firstOK = false;
 let secondOK = false;
 
 function checkFirst() {
-    if(document.getElementById('pwd1').value.toLowerCase() === "present") {
+    mdpInput = document.getElementById('pwd1').value.toLowerCase()
+    if(mdpInput === "present" || mdpInput === "présent") {
         firstOK = true;
         document.getElementById('secondStep').classList.remove('hidden');
     } else {
