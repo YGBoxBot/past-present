@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>2025 - Carnet d’Elara</title>
+<title>Spark Of The Past</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
@@ -77,36 +77,32 @@ iframe {
 
 <body>
 <div class="container">
-<h1>2025 — Carnet d’une femme en avance sur son temps</h1>
+<h1>2025 — Diary of a Woman Ahead of Her Time</h1>
 
 <p>
-Je suis Elara, année 2025.  
-Je travaille seule, dans un laboratoire que personne ne connaît vraiment. Une scientifique romantique, à la quête de mon âme sœur. 
-Je veux créer un être capable de ressentir — pas seulement de fonctionner.  
-
-Je sais que la technologie nécessaire n’existera que dans un siècle.  
-Mais j’écris pour quelqu’un qui n’est pas encore né.  
-Un homme du futur.  
-Un homme que je ne rencontrerai jamais.  
-
-Le passé n’est plus, le futur n’existe pas encore.  
-Mais si j’agis aujourd’hui… peut-être qu’un jour, quelqu’un comprendra.  
-
-J’écris en écoutant ma playlist : analogique, fragile, humaine. Une tranche de présent pour un futur incertain.
+I am Elara, year 2025. 
+I work alone, in a laboratory that no one truly knows. A romantic scientist, in search of my soulmate.
+I want to create a being capable of feeling — not just functioning.
+I know the technology required won’t exist for another century. But I write for someone who is not yet born.
+A man of the future. A man I will never meet. The past is no more, the future does not yet exist.
+    
+But if I act today… maybe one day, someone will understand.
+    
+I write while listening to my playlist: analog, fragile, human. A slice of the present for an uncertain future.
 </p>
 
-<h2>Énigme</h2>
-<p>“Ni hier, ni demain ; mot qui commence par la lettre des premiers pas, qui finit par le souffle d’un instant.”</p>
+<h2>Riddle</h2>
+<p>“Neither yesterday nor tomorrow; a word that begins with the letter of the first pulse, ending with the breath of a moment.”</p>
 
-<input type="password" id="pwd1" placeholder="Flame Du Passé">
-<button onclick="checkFirst()">Valider</button>
+<input type="password" id="pwd1" placeholder="Spark Of The Past">
+<button onclick="checkFirst()">Submit</button>
 
 <div id="secondStep" class="hidden">
-  <p><strong>Bravo, tu as trouvé la Flamme Du Passé.</strong><br>
-  Mais il te manque encore un fragment : <em>la Constante Du Futur</em>.<br>Approche toi de son porteur pour en comprendre le sens.</p>
+  <p><strong>Congrats! You solved the Spark Of The Past.</strong><br>
+  You're missing a piece: <em>the Beacon Of The Future</em>.<br>Approach its bearer to understand its meaning.</p>
 
-  <input type="password" id="pwd2" placeholder="Constante Du Futur">
-  <button onclick="checkSecond()">Déverrouiller</button>
+  <input type="password" id="pwd2" placeholder="Beacon Of The Future">
+  <button onclick="checkSecond()">Unlock</button>
 </div>
 
 <div class="iframe-container">
@@ -123,7 +119,7 @@ function checkFirst() {
         firstOK = true;
         document.getElementById('secondStep').classList.remove('hidden');
     } else {
-        alert("Mot de passe incorrect.");
+        alert("Wrong password.");
     }
 }
 
@@ -134,7 +130,7 @@ function checkSecond() {
             window.location.href = "Fd35rt.html";
         }
     } else {
-        alert("Mot de passe incorrect.");
+        alert("Wrong password.");
     }
 }
 </script>
